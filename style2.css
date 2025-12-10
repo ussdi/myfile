@@ -1,0 +1,57 @@
+h1 {
+  color: darkred;
+  text-align: center;
+}
+
+h2 {
+  color: darkblue;
+}
+
+/* Абзацы */
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
+/* Список */
+.bold {
+  font-weight: bold;
+}
+
+/* Заголовок с ID */
+#main-title {
+  color: red;
+}
+
+/* Приоритет селекторов */
+p {
+  color: green; /* по тегу */
+}
+
+.highlight {
+  color: orange; /* по классу */
+}
+
+#priority-example {
+  color: purple; /* по ID - применяется, т.к. приоритет выше */
+}
+
+/* Форма */
+fieldset {
+  border: 2px solid #ccc;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  margin-top: 5px;
+}

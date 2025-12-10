@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARUZHAN</title>
+    <!-- Подключение внешнего CSS -->
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <!-- Заголовок с ID -->
+    <h1 id="main-title">Мой сайт</h1>
+
+    <h2>Информация о себе</h2>
+    <p>
+      Привет! Меня зовут Аружан. Я увлекаюсь веб-разработкой и люблю создавать
+      красивые и функциональные сайты.
+    </p>
+
+    <h2>Мои интересы</h2>
+    <ul>
+      <li class="bold">Любимый язык программирования: JavaScript</li>
+      <li>Хобби: Чтение, Путешествия, Музыка</li>
+      <li class="bold">Любимая еда: Плов, Суши, Паста</li>
+    </ul>
+
+    <h2>Контактная информация</h2>
+    <p>Здесь написана контактная информация обо мне!</p>
+
+    <!-- Демонстрация приоритета селекторов -->
+    <p id="priority-example" class="highlight">
+      Этот абзац показывает приоритет селекторов: тег (p), класс (.highlight) и
+      ID (#priority-example). Цвет будет фиолетовый.
+    </p>
+
+    <!-- Форма -->
+    <form action="/submit_form" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your name"
+        /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="example@mail.com"
+        /><br /><br />
+      </fieldset>
+    </form>
+  </body>
+</html>
