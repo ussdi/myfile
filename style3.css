@@ -1,0 +1,31 @@
+html {
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: blueviolet;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.container p {
+  font-size: 2em;
+}
+
+.container {
+  font-size: 50%;
+}
+.block-hex {
+  color: #ff3578;
+}
+
+.block-rgb {
+  color: rgb(148, 25, 90);
+}
+
+.block-rgba {
+  color: rgba(30, 90, 180, 0.5);
+}
