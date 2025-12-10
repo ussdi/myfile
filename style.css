@@ -1,0 +1,40 @@
+/*1. Селектор по тегу*/
+p {
+  color: blue;
+}
+
+/* 2. Селектор по классу.bold будут жирными */
+.bold {
+  font-weight: bold;
+}
+
+/* 3. Селектор по ID
+   Заголовок с id="main-title" будет красного цвета */
+#main-title {
+  color: red;
+}
+
+h1,
+h2 {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: square;
+}
+
+input,
+textarea {
+  padding: 5px;
+  margin-top: 3px;
+}
+
+fieldset {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+}
