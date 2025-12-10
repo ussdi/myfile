@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I LOVE ARUZHAN</title>
+  </head>
+  <body>
+    <h1>Contact Form for Aruzhan</h1>
+
+    <!-- Начало формы -->
+    <form action="/submit_form" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <!-- Поле для имени -->
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your name"
+        /><br /><br />
+
+        <!-- Поле для email -->
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="example@mail.com"
+        /><br /><br />
+
+        <!-- Поле для выбора страны -->
+        <label for="country">Country:</label><br />
+        <select name="country" id="country" required>
+          <option value="">Select your country</option>
+          <option value="kazakhstan">Kazakhstan</option>
+          <option value="russia">Russia</option>
+          <option value="usa">USA</option>
+          <option value="china">China</option>
+          <option value="india">India</option></select
+        ><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Message</legend>
+
+        <!-- Поле для комментария/сообщения -->
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+          placeholder="Write your message here"
+        ></textarea
+        ><br /><br />
+      </fieldset>
+
+      <!-- Кнопки формы -->
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
