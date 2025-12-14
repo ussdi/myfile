@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 730px;
+}
+.card1 {
+  background-color: #e1ede6;
+  padding: 20px 20px 30px 20px;
+  width: fit-content;
+}
+.author {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #86928b;
+  padding: 20px 190px 10px 0;
+}
+.name {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #2c2d35;
+  margin-bottom: 8px;
+}
+.materials {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #2c2d35;
+  margin-bottom: 20px;
+}
+.price {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #598d66;
+  margin-bottom: 20px;
+}
+.btn1 {
+  padding: 20px 106.5px 20px 106.5px;
+  background-color: transparent;
+  color: #598d66;
+  border: 1px solid #598d66;
+  font-size: 20px;
+}
