@@ -1,0 +1,39 @@
+.pseudo {
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+p::before {
+  content: "❗️ ";
+  color: orange;
+}
+p::after {
+  content: " ✔";
+  color: green;
+}
+
+.pseudo {
+  background-color: #fff;
+  padding: 20px;
+  margin: 30px 0;
+  position: relative;
+}
+.pseudo::before {
+  content: "ДО";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0da3c1;
+}
+.pseudo::after {
+  content: "ПОСЛЕ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0da3c1;
+}
