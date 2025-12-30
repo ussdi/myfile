@@ -15,6 +15,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.list {
+  display: none;
+}
 .logo {
   display: flex;
 }
@@ -344,7 +347,9 @@ nav {
   header {
     padding: 38px 39px;
   }
-
+  .list {
+    display: none;
+  }
   .menu {
     gap: 60px;
   }
@@ -469,6 +474,9 @@ nav {
   }
   nav {
     display: grid;
+  }
+  .list {
+    display: none;
   }
   .logo {
     grid-row: 1;
@@ -656,27 +664,75 @@ nav {
     justify-content: center;
   }
 }
-@media (max-width: 320px) {
-  .logo {
-    padding: 17px 50px 16px 50px;
-  }
-  /* Скрываем обычное горизонтальное меню на мобильном */
-  .menu a {
-    display: none; /* ссылки прячем */
+@media (max-width: 420px) {
+  header {
+    padding: 20px 0;
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px; /* Ограничиваем ширину header */
+    margin: 0 auto; /* Центрируем */
   }
 
-  .menu img[src*="List.png"] {
-    display: inline-block; /* показываем бургер */
-    cursor: pointer;
-    margin-left: 0;
-    margin-right: 150px;
+  nav {
+    width: 100%;
+    max-width: 420px; /* Ограничиваем ширину nav */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Важно! */
   }
+
+  /* Логотип */
+  .logo {
+    padding: 5px 70px 5px 70px;
+    display: flex;
+    width: 100%;
+    margin-bottom: -5px;
+    margin-top: -5px;
+    position: relative;
+  }
+
+  .logo img.star {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  .logo p {
+    font-size: 20px; /* Уменьшил для мобильных */
+    font-weight: 700;
+    color: #2c2c2c;
+    letter-spacing: -0.5px;
+  }
+
+  /* Иконки справа */
+  .menu {
+    display: flex;
+    width: 100%;
+    max-width: 420px; /* Ограничиваем ширину */
+    gap: 200px; /* Увеличил отступы для лучшего вида */
+    background-color: #e1ede6;
+    padding: 12px 20px 8px 20px; /* Добавил отступы сверху и снизу */
+    box-sizing: border-box;
+  }
+
+  .menu a {
+    display: none;
+  }
+
+  .menu img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
   .replica img {
     display: none;
   }
   .replica-text h1 {
     font-size: 30px;
-    padding: 60px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
   }
   .replica-text p {
     font-size: 14px;
@@ -696,7 +752,7 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     width: 510px;
     padding: 30px 15px 30px 15px;
-    margin-left: 30px;
+    margin-left: 10px;
   }
   .card {
     width: 290px;
@@ -770,84 +826,178 @@ nav {
     padding: 0; /* убираем внутренние отступы */
     display: block; /* убирает маленькие пробелы между inline-block элементами */
   }
-  .ftr {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
+  footer {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: #fff;
   }
 
-  .top-row {
+  .ftr {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    grid-template-rows: auto auto auto; /* 3 строки */
+    gap: 0;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    background-color: #e1ede6; /* Цвет фона как на скрине */
+    font-size: 16px; /* Размер шрифта как на скрине */
+    color: #000000; /* Цвет текста как на скрине */
+  }
+
+  /* ЛОГОТИП - на всю ширину, первая строка */
+  .contact {
+    grid-column: 1 / -1; /* Занимает обе колонки */
+    grid-row: 1;
     display: flex;
-    width: 100%;
-    justify-content: space-between; /* логотип слева, ссылки справа */
+    flex-direction: column;
+    gap: 8px;
     margin-bottom: 20px;
   }
 
-  .contact {
+  /* Логотип отдельно вверху */
+  .contact .logo {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .num,
-  .num_text {
-    margin: 2px 0;
-    font-size: 14px;
-  }
-
-  /* Блок ссылок справа */
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .links ul {
-    margin: 0 0 10px 0;
+    margin-bottom: 20px;
     padding: 0;
-    list-style: none;
   }
 
-  .links p {
-    font-size: 14px;
-    margin-bottom: 3px;
+  .contact .logo p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c2c2c;
+    color: #598d66;
   }
 
-  .links a {
-    font-size: 12px;
-    text-decoration: none;
-    color: #86928b;
-    display: block;
-    margin-bottom: 2px;
-  }
-
-  /* Нижняя строка — веб */
-  .web {
+  /* Номер телефона и "Мастерская" - левая колонка, вторая строка */
+  .num {
+    grid-column: 1;
+    grid-row: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    gap: 5px;
+    align-self: flex-start; /* Выравниваем по верху */
   }
 
-  .web_logo {
-    display: flex;
-    justify-content: center;
+  .num {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2c2c;
+    text-align: left;
     margin-bottom: 5px;
   }
 
-  .web_logo img {
-    margin: 0 5px;
+  .num_text {
+    margin: 0;
+    font-size: 16px;
+    color: #86928b;
+    text-align: left;
+  }
+
+  /* РЕПРОДУКЦИИ - правая колонка, вторая строка (рядом с номером) */
+  .repr_ftr {
+    grid-column: 2;
+    grid-row: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+    align-self: flex-start; /* Выравниваем по верху */
+  }
+
+  /* НОВИНКИ - левая колонка, третья строка */
+  .new {
+    grid-column: 1;
+    grid-row: 3;
+    list-style: none;
+    margin: 30px 0 0 0;
+    padding: 0 20px 0 0;
+    align-self: flex-start;
+    /* Выравниваем по верху */
+  }
+
+  /* О НАС - правая колонка, третья строка (под Репродукциями) */
+  .about_us {
+    grid-column: 2;
+    grid-row: 3;
+    list-style: none;
+    margin: 30px 0 0 0;
+    padding: 0 0 0 20px;
+    align-self: flex-start; /* Выравниваем по верху */
+  }
+
+  /* Заголовки списков */
+  .repr_ftr > p,
+  .new > p,
+  .about_us > p {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+  }
+
+  /* Ссылки в списках */
+  .repr_ftr a,
+  .new a,
+  .about_us a {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    color: #86928b;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+  }
+
+  /* Убираем <br> отступы */
+  .repr_ftr br,
+  .new br,
+  .about_us br {
+    display: none;
+  }
+
+  /* РАЗДЕЛИТЕЛЬНАЯ ЛИНИЯ - на всю ширину */
+  .ftr-divider {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    width: 100%;
+    height: 1px;
+    background-color: #d0ddd5;
+    margin: 30px 0;
+  }
+
+  /* СОЦСЕТИ И КОПИРАЙТ - на всю ширину */
+  .web {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-top: 2px solid #d9e6e0;
+  }
+
+  /* Иконки соцсетей в строку */
+  .web_logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  /* Копирайт одной строкой */
+  .web_text {
+    text-align: center;
+    color: #86928b;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 0;
   }
 
   .web_text p {
-    font-size: 10px;
-    text-align: center;
-    margin: 1px 0;
+    margin: 0;
+    display: inline;
+  }
+
+  .web_text p:first-child::after {
+    content: " ";
   }
 }
