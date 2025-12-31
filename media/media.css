@@ -847,7 +847,7 @@ nav {
 
   /* ЛОГОТИП - на всю ширину, первая строка */
   .contact {
-    grid-column: 1 / -1; /* Занимает обе колонки */
+    grid-column: 1 / 1; /* Занимает обе колонки */
     grid-row: 1;
     display: flex;
     flex-direction: column;
@@ -871,8 +871,6 @@ nav {
 
   /* Номер телефона и "Мастерская" - левая колонка, вторая строка */
   .num {
-    grid-column: 1;
-    grid-row: 2;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -892,6 +890,10 @@ nav {
     font-size: 16px;
     color: #86928b;
     text-align: left;
+  }
+  .numberAndText {
+    grid-column: 1;
+    grid-row: 2;
   }
 
   /* РЕПРОДУКЦИИ - правая колонка, вторая строка (рядом с номером) */
